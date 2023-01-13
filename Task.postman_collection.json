@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "7ff3edec-9468-45ac-84d3-defca514bfb2",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20236297"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Get list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/authentication/users",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"shafi\",\r\n    \"username\": \"shafi3431\",\r\n    \"phone_number\": \"03071212123\",\r\n    \"email\": \"test1@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"confirm_password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/authentication/users",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"first_name\": \"Shafi Ullah\",\r\n    \"last_name\": \"Khan\",\r\n    \"name\": \"Khan\",\r\n    \"username\": \"Shafi1177\",\r\n    \"phone_number\": \"23423423423\",\r\n    \"email\": \"testttt@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/authentication/users",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get single",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/authentication/users/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/authentication/users/6",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"users",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Real Estate",
+					"item": [
+						{
+							"name": "Get list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/authentication/real_estate",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"real_estate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user listing",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/authentication/user_listings?user_id=1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"user_listings"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": 1,\r\n    \"description\": \"descriptibfbdffondfsafs\",\r\n    \"price\": \"323213\",\r\n    \"real_estate_address\": \"test1 sfbdfgvddhfh\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/authentication/real_estate",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"real_estate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"first_name\": \"Shafi Ullah\",\r\n    \"last_name\": \"Khan\",\r\n    \"name\": \"Khan\",\r\n    \"username\": \"Shafi1177\",\r\n    \"phone_number\": \"23423423423\",\r\n    \"email\": \"testttt@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/authentication/users",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get single",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/authentication/real_estate/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"real_estate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{base_app token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/authentication/real_estate/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"real_estate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sign in",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username_or_email\": \"shafi3431\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/authentication/login",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username_or_email\": \"shafi3431\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/authentication/logout",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"authentication",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
